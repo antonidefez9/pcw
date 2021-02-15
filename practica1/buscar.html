@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RutasVerdes</title>
+    <link rel='shortcut icon' type='image/x-icon' href='./images/favicon.ico'>
+</head>
+<body>
+        <header>
+            <img src="images/logo.png" alt="">
+            <h1>RutasVerdes</h1>
+            <h2>Punto de encuentro para senderistas</h2>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                    <a href="buscar.html">Buscar</a>
+                    <a href="nueva.html">Nueva ruta</a>
+                    <a href="logout.html">Logout</a>
+                    <a href="login.html">Login</a>
+                    <a href="registro.html">Registro</a>
+                </li>
+            </ul>
+        </nav>
+
+    <main>
+        <!--
+            DUDA
+Las dos opciones para buscar por rango, aparecerán por defecto con el valor mínimo
+y máximo del rango y ofrecerán la posibilidad de elegir el orden (ascendente/descendente)
+en que queremos que se muestren los resultados.-->
+
+        <article>
+            <form action="">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                <div>
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" name="descripcion" id="descripcion">
+                </div>
+                <div>
+                    <label for="dificultad">Dificultad</label>
+                    <input type="range">
+                </div>
+                <div>
+                    <label for="fecha_ini">Fecha inicio</label>
+                    <input type="date" name="fecha_ini" id="fecha_ini">
+                </div>
+                <div>
+                    <label for="fecha_fin">Fecha fin</label>
+                    <input type="date" name="fecha_fin" id="fecha_fin">
+                </div>
+                <div>
+                    <label for="fav">favoritas</label>
+                    <input type="checkbox" name="fav" id="fav">
+                </div>
+          
+                <button type="submit">Buscar</button>
+            </form>
+        </article>
+
+        <section>
+            <!--COPIA DEL MAIN DE INDEX-->
+        </section>
+
+    </main>
+
+    <footer>
+        <p>pwc 2021©</p>
+        <p><a href="acerca.html">Autor</a></p>
+    </footer>
+    
+</body>
+</html>
