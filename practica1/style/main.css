@@ -1,3 +1,7 @@
+
+@font-face { font-family: acme-regular; 
+    src: url('../fonts/Acme/Acme-Regular.ttf'); } 
+
 html,body{
     height: 100%;
     color: rgba(255, 255, 255, 0.8);
@@ -8,10 +12,13 @@ html,body{
 }
 
 
+
 header{
     display: flex;
     justify-content:start;
     align-items:center;
+    font-family: acme-regular;
+    background: #3c864a;
 }
 header img {
     width: 100px;
@@ -42,7 +49,7 @@ nav>ul{
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #777;
+    background-color: #3c864a;
 }
 
 nav li>a{
@@ -93,6 +100,16 @@ section{
     -moz-box-shadow:-1px 1px 0px 0px #000000;
     -webkit-box-shadow:-1px 1px 0px 0px #000000;
     
+
+    transition: 1s ease;
+}
+
+
+.galeria_ruta article:hover{
+    -webkit-transform: scale(1.03);
+-ms-transform: scale(1.03);
+transform: scale(1.03);
+transition: 1s ease;
 }
 
 .header_ruta{
@@ -117,8 +134,26 @@ article .content{
     background-color: red;
 }
 
-.bg
-{
-  width: 100%;
-  z-index: 0;
-}
+
+
+
+  
+
+article .imagen {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    }
+
+    article .imagen:hover {
+        -webkit-filter: brightness(100%);
+
+    }
+
+
+footer{
+
+    }
