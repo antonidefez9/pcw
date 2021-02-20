@@ -1,91 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RutasVerdes</title>
-    <link rel='shortcut icon' type='image/x-icon' href='./images/favicon.ico'>
+    <title>RutasVerdes-Buscador</title>
     <link rel="stylesheet" href="./style/main.css">
+    <link rel='shortcut icon' type='image/x-icon' href='./images/favicon.ico'>
+    <link rel="stylesheet" href="./icons/icomoon/style.css">
 </head>
-<body>
-        <header>
-            <img src="images/logo.png" alt="">
-            <h1>RutasVerdes</h1>
-            <h2>Punto de encuentro para senderistas</h2>
-        </header>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="buscar.html">Buscar</a>
-                </li>
-                <li>
-                    <a href="nueva.html">Nueva ruta</a>
-                </li>
-                <li>
-                    <a href="logout.html">Logout</a>
-                </li>
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
-                <li>
-                    <a href="registro.html">Registro</a>
-                </li>
-               
-            </ul>
-        </nav>
+<body>
+    <header>
+        <img src="images/logo_header.png" alt="imagen_titulo">
+        <div class="header_info">
+            <h1>RutasVerdes</h1>
+            <p> <em>Punto de encuentro para senderistas</em></p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <span class="icon-home"></span>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <span class="icon-search"></span>
+                <a href="buscar.html">Buscar</a>
+            </li>
+            <li>
+                <span class="icon-plus"></span>
+                <a href="nueva.html">Nueva ruta</a>
+            </li>
+            <li>
+                <span class="icon-exit"></span>
+                <a href="logout.html">Logout</a>
+            </li>
+            <li>
+                <span class="icon-enter"></span>
+                <a href="login.html">Login</a>
+            </li>
+            <li>
+                <span class="icon-clipboard"></span>
+                <a href="registro.html">Registro</a>
+            </li>
+
+        </ul>
+    </nav>
 
     <main>
-        <!--
-            DUDA
-Las dos opciones para buscar por rango, aparecerán por defecto con el valor mínimo
-y máximo del rango y ofrecerán la posibilidad de elegir el orden (ascendente/descendente)
-en que queremos que se muestren los resultados.-->
-
-        <article>
-            <form action="">
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre">
-                </div>
-                <div>
-                    <label for="descripcion">Descripcion</label>
-                    <input type="text" name="descripcion" id="descripcion">
-                </div>
-                <div>
-                    <label for="dificultad">Dificultad</label>
-                    <input type="range">
-                </div>
-                <div>
-                    <label for="fecha_ini">Fecha inicio</label>
-                    <input type="date" name="fecha_ini" id="fecha_ini">
-                </div>
-                <div>
-                    <label for="fecha_fin">Fecha fin</label>
-                    <input type="date" name="fecha_fin" id="fecha_fin">
-                </div>
-                <div>
-                    <label for="fav">favoritas</label>
-                    <input type="checkbox" name="fav" id="fav">
-                </div>
-          
-                <button type="submit">Buscar</button>
-            </form>
-        </article>
-
         <section>
+            <article class="cajaverde">
+                <div class="header">
+                    <h3>Buscador</h3>
+                </div>
+    
+                <div class="form">
+                    <form action="">
+                        <ul>
+                            <li>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" autofocus>
+                            </li>
+                            <li>
+                                <label for="autor">Autor</label>
+                                <input type="text" name="autor" id="autor" >
+                            </li>
+                            <li>
+                                <label for="descripcion">Descripcion</label>
+                                <input type="text" name="descripcion" id="descripcion">
+                            </li>
+                            <li>
+                                Seleccione dificultad:
+                            </li>
+                            <li>
+                                <div class="intern">
+                                    <label for="dificultad"> Minima</label>
+                                    <input type="number" name="min_dif"   value="0" id="min_dif">
+                                </div>
+                                <div class="intern">
+                                    <label for="dificultad">Max</label>
+                                    <input type="number" name="max_dif"  value="5" id="max_dif">
+                                </div>
+                             
+                            </li>
+                            <li>
+                                Seleccione fecha:
+                            </li>
+                            <li>
+                                <div class="intern">
+                                    <label for="fecha_ini">Inicio</label>
+                                    <input type="date" name="fecha_ini" value="2018-07-22" id="fecha_ini">
+                                </div>
+                                <div class="intern">
+                                    <label for="fecha_fin">Fin</label>
+                                    <input type="date" name="fecha_fin"  value="2021-01-22" id="fecha_fin">
+                                </div>
+    
+                            </li>
+      
+                            <li>
+                                <label for="fav">Favoritas</label>
+                                <input type="checkbox" name="fav" id="fav">
+                            </li>
+                            <li>
+                                <button type="submit">Submit</button>
+                              </li>
+                        </ul>
+                       
+                    </form>
+                </div>
+        
+            </article>
+        </section>
+      
+    
+
+        <div class="header">
+            <h3>Resultados</h3>
+        </div>
+        <section  class="galeria_ruta">
+           
+            <article>
+                <div class="header_ruta">
+
+                    <img src="https://dummyimage.com/60x60/000/fff" alt="">
+
+                    <p>Usuario: Pepe</p>
+                </div>
+
+                <a href="ruta.html">
+                    <img class="imagen" src="images/ruta1.jpg" alt="image_ruta">
+                </a>
+
+
+
+                <div class="content">
+                    <p>Nombre de la ruta: Ruta 1</p>
+                    <p>Fecha creacion: 1 de marzo de 2020</p>
+                    <p>Dificultad: muy dificil</p>
+                </div>
+            </article>
+            <article>
+                <div class="header_ruta">
+
+                    <img src="https://dummyimage.com/60x60/000/fff" alt="">
+
+                    <p>Usuario: Pepe</p>
+                </div>
+
+                <a href="ruta.html">
+                    <img class="imagen" src="images/ruta1.jpg" alt="image_ruta">
+                </a>
+
+
+
+                <div class="content">
+                    <p>Nombre de la ruta: Ruta 1</p>
+                    <p>Fecha creacion: 1 de marzo de 2020</p>
+                    <p>Dificultad: muy dificil</p>
+                </div>
+            </article>
+
             <!--COPIA DEL MAIN DE INDEX-->
         </section>
+
+
+        <div class="container-pag">
+            <div>
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+        </div>
+
+
 
     </main>
 
     <footer>
-        <p>pwc 2021©</p>
+        <p>pwc 2021</p>
+        <p>RutasVerdes©</p>
         <p><a href="acerca.html">Autor</a></p>
     </footer>
-    
+
 </body>
+
 </html>

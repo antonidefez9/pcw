@@ -1,52 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RutasVerdes</title>
-    <link rel='shortcut icon' type='image/x-icon' href='./images/favicon.ico'>
     <link rel="stylesheet" href="./style/main.css">
+    <link rel='shortcut icon' type='image/x-icon' href='./images/favicon.ico'>
+    <link rel="stylesheet" href="./icons/icomoon/style.css">
 </head>
+
 <body>
-        <header>
-            <img src="images/logo.png" alt="">
+    <header>
+        <img src="images/logo_header.png" alt="imagen_titulo">
+        <div class="header_info">
             <h1>RutasVerdes</h1>
-            <h2>Punto de encuentro para senderistas</h2>
-        </header>
+            <p> <em>Punto de encuentro para senderistas</em></p>
+        </div>
+    </header>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="buscar.html">Buscar</a>
-                </li>
-                <li>
-                    <a href="nueva.html">Nueva ruta</a>
-                </li>
-                <li>
-                    <a href="logout.html">Logout</a>
-                </li>
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
+    <nav>
+        <ul>
+            <li>
+                <span class="icon-home"></span>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <span class="icon-search"></span>
+                <a href="buscar.html">Buscar</a>
+            </li>
+            <li>
+                <span class="icon-plus"></span>
+                <a href="nueva.html">Nueva ruta</a>
+            </li>
+            <li>
+                <span class="icon-exit"></span>
+                <a href="logout.html">Logout</a>
+            </li>
+            <li>
+                <span class="icon-enter"></span>
+                <a href="login.html">Login</a>
+            </li>
+            <li>
+                <span class="icon-clipboard"></span>
+                <a href="registro.html">Registro</a>
+            </li>
 
-                <li>
-                    <a href="registro.html">Registro</a>
-                </li>
-           
-            </ul>
-        </nav>
+        </ul>
+    </nav>
 
-    <main>
+ <main>
+ 
 
-    </main>
+    <section>
+        <article class="cajaverde">
+            <div class="header">
+                <h3>Crear nueva ruta</h3>
+            </div>
+
+            <!--
+
+                Nombre de la ruta​, ​descripción, dificultad y duración de la ruta​.
+            -->
+            <div class="form">
+                <form action="">
+                    <ul>
+                        <li>
+                            <label for="nombre_ruta">Nombre de la ruta</label>
+                            <input type="text" name="nombre_ruta" id="nombre_ruta" autofocus>
+                        </li>
+                        <li>
+                            <label for="desc">Descripcion</label>
+                            <input type="text" name="desc" id="desc" >
+                        </li>
+                        <li>
+                            <label for="dificultad">Dificultad</label>
+                            <input type="number" name="dificultad" id="dificultad">
+                        </li>
+                        <li>
+                            <label for="duracion">Duracion de la ruta</label>
+                            <input type="time" name="duracion" id="duracion">
+                        </li>
+                    </ul>
+
+                    <div class="seccion_images">
+                        <h3>Seccion de imagenes</h3>
+                        <div>
+                            <img src="./images/usuario.png" alt="">
+                        </div>
+                        <div>
+                            <h4>Descripcion de la imagen</h4>
+                            <textarea placeholder="Introduce la descripcion de la imagen" name="descp_image" id="descp_image" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div>
+                            <button> Borrar imagen</button>
+                            <button> Añadir imagen</button>
+                        </div>
+                       
+                    </div>
+                   
+                </form>
+            </div>
+        </article>
+
+    </section>
+ </main>
 
     <footer>
-        <p>pwc 2021©</p>
+        <p>pwc 2021</p>
+        <p>RutasVerdes©</p>
         <p><a href="acerca.html">Autor</a></p>
     </footer>
-    
+
 </body>
+
 </html>
