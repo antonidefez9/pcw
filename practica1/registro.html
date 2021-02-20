@@ -50,14 +50,17 @@
     </nav>
 
     <main>
+        <div class="header">
+            <h3>Registro de nuevo usuario</h3>
+        </div>
 
         <section>
             <div class="header">
-                <h3>Registro de nuevo usuario</h3>
+                <h3>Datos del usuario</h3>
             </div>
     
             <article class="cajaverde" >
-                <form action="">
+                <form action="#">
                     <ul>
                         <li>
                         <label for="login">Login</label>
@@ -66,7 +69,7 @@
     
                         <li>
                         <label for="password">Contraseña</label>
-                        <input type="password" id="login" pattern="^[a-zA-Z0-9_.-]{6,20}" name="password" required>
+                        <input type="password" id="password" pattern="^[a-zA-Z0-9_.-]{6,20}" name="password" required>
                         </li>
     
                         <li>
@@ -85,11 +88,10 @@
                         </li>
                         <li>
                             <label for="image">Imagen</label>
-                            <input type="file"  accept="image/x-png,image/gif,image/jpeg" name="" id="">
+                            <input type="file"  accept="image/x-png,image/gif,image/jpeg" name="image" id="image">
                         </li>
                         <li>
                                 <img src="./images/usuario.png" alt="">
-                         
                         </li>
                         <li>
                             <button type="submit">Registrarme</button>
